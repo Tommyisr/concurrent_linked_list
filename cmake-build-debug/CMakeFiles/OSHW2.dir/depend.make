@@ -4,7 +4,3 @@
 CMakeFiles/OSHW2.dir/concurrent_list.c.obj: ../concurrent_list.c
 CMakeFiles/OSHW2.dir/concurrent_list.c.obj: ../concurrent_list.h
 
-CMakeFiles/OSHW2.dir/temp.c.obj: ../temp.c
-
-CMakeFiles/OSHW2.dir/temp2.c.obj: ../temp2.c
-

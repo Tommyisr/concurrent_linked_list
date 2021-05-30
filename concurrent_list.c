@@ -43,54 +43,6 @@ void delete_node(node* node)
     free(node);
 }
 
-
-_Noreturn void delete_list(list* list)
-{
-
-    // check that list exists
-    if(!list) {
-        printf("The current list doesn't exist! \n");
-    }
-
-    else{
-        pthread_mutex_lock(list->m);
-        node* prev = list->head;
-
-        // check that list isn't empty
-        if(!prev) {
-            pthread_mutex_unlock(list->m);
-            pthread_mutex_destroy(list->m);
-            free(list->m);
-            free(list);
-        }
-
-        else {
-            node* curr = prev->next;
-            pthread_mutex_lock(prev->m);
-            if(curr) pthread_mutex_lock(curr->m);
-
-            while (curr){
-
-                pthread_mutex_unlock(prev->m);
-                delete_node(prev);
-                prev = curr;
-                curr = curr->next;
-                if(curr) pthread_mutex_lock(curr->m);
-
-            }
-            pthread_mutex_unlock(prev->m);
-            delete_node(prev);
-
-            free(list);
-        }
-
-        }
-
-
-
-}
-
-
 node* create_node(int value){
 
     node* tmp = malloc(sizeof(node));
@@ -101,6 +53,51 @@ node* create_node(int value){
     return tmp;
 
 }
+
+ void delete_list(list* list) {
+
+
+    if (list) {
+
+        pthread_mutex_lock(list->m);
+        node *prev = list->head;
+
+        // check that list isn't empty
+        if (!prev) {
+            pthread_mutex_unlock(list->m);
+            pthread_mutex_destroy(list->m);
+            free(list->m);
+            free(list);
+        } else {
+            node *curr = prev->next;
+            pthread_mutex_lock(prev->m);
+            if (curr) pthread_mutex_lock(curr->m);
+
+            while (curr) {
+
+                pthread_mutex_unlock(prev->m);
+                delete_node(prev);
+                prev = curr;
+                curr = curr->next;
+                if (curr) pthread_mutex_lock(curr->m);
+
+            }
+            pthread_mutex_unlock(prev->m);
+            delete_node(prev);
+
+            pthread_mutex_unlock(list->m);
+            pthread_mutex_destroy(list->m);
+            free(list->m);
+            free(list);
+        }
+
+    }
+
+}
+
+
+
+
 
 
 void insert_value(list* list, int value)
@@ -178,6 +175,7 @@ void remove_value(list* list, int value)
 
     }
 
+    pthread_mutex_unlock(list->m);
     if(curr) pthread_mutex_lock(curr->m);
 
     while(curr){
@@ -230,7 +228,7 @@ void print_list(list* list)
 
         prev = curr;
         curr = curr->next;
-        if(curr) pthread_mutex_lock(prev->m);
+        if(curr) pthread_mutex_lock(curr->m);
     }
 
     pthread_mutex_unlock(prev->m);

@@ -6,7 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Tommy/CLionProjects/OSHW2/temp.c
+C:/Users/Tommy/CLionProjects/OSHW2/concurrent_list.c
+pthread.h
+-
+stdio.h
+-
+stdlib.h
+-
+limits.h
+-
+concurrent_list.h
+C:/Users/Tommy/CLionProjects/OSHW2/concurrent_list.h
 
-C:/Users/Tommy/CLionProjects/OSHW2/temp2.c
+C:/Users/Tommy/CLionProjects/OSHW2/concurrent_list.h
 
