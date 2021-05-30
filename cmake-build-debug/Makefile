@@ -169,60 +169,6 @@ concurrent_list.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OSHW2.dir\build.make CMakeFiles/OSHW2.dir/concurrent_list.c.s
 .PHONY : concurrent_list.c.s
 
-temp.obj: temp.c.obj
-
-.PHONY : temp.obj
-
-# target to build an object file
-temp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OSHW2.dir\build.make CMakeFiles/OSHW2.dir/temp.c.obj
-.PHONY : temp.c.obj
-
-temp.i: temp.c.i
-
-.PHONY : temp.i
-
-# target to preprocess a source file
-temp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OSHW2.dir\build.make CMakeFiles/OSHW2.dir/temp.c.i
-.PHONY : temp.c.i
-
-temp.s: temp.c.s
-
-.PHONY : temp.s
-
-# target to generate assembly for a file
-temp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OSHW2.dir\build.make CMakeFiles/OSHW2.dir/temp.c.s
-.PHONY : temp.c.s
-
-temp2.obj: temp2.c.obj
-
-.PHONY : temp2.obj
-
-# target to build an object file
-temp2.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OSHW2.dir\build.make CMakeFiles/OSHW2.dir/temp2.c.obj
-.PHONY : temp2.c.obj
-
-temp2.i: temp2.c.i
-
-.PHONY : temp2.i
-
-# target to preprocess a source file
-temp2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OSHW2.dir\build.make CMakeFiles/OSHW2.dir/temp2.c.i
-.PHONY : temp2.c.i
-
-temp2.s: temp2.c.s
-
-.PHONY : temp2.s
-
-# target to generate assembly for a file
-temp2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OSHW2.dir\build.make CMakeFiles/OSHW2.dir/temp2.c.s
-.PHONY : temp2.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -235,12 +181,6 @@ help:
 	@echo ... concurrent_list.obj
 	@echo ... concurrent_list.i
 	@echo ... concurrent_list.s
-	@echo ... temp.obj
-	@echo ... temp.i
-	@echo ... temp.s
-	@echo ... temp2.obj
-	@echo ... temp2.i
-	@echo ... temp2.s
 .PHONY : help
 
 

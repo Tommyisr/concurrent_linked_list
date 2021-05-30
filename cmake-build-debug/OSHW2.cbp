@@ -86,12 +86,6 @@
 		<Unit filename="C:/Users/Tommy/CLionProjects/OSHW2/concurrent_list.h">
 			<Option target="OSHW2"/>
 		</Unit>
-		<Unit filename="C:/Users/Tommy/CLionProjects/OSHW2/temp.c">
-			<Option target="OSHW2"/>
-		</Unit>
-		<Unit filename="C:/Users/Tommy/CLionProjects/OSHW2/temp2.c">
-			<Option target="OSHW2"/>
-		</Unit>
 		<Unit filename="C:/Users/Tommy/CLionProjects/OSHW2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
