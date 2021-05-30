@@ -39,7 +39,7 @@ list* create_list()
     return mylist;
 }
 
-void delete_list(list* list)
+_Noreturn void delete_list(list* list)
 {
     node* temp;
     if(list->head!=NULL){

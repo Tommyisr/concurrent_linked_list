@@ -55,7 +55,7 @@ void delete_node(node* node)
     free(node);
 }
 
-void delete_list(list* list)
+_Noreturn void delete_list(list* list)
 {
     /*
      * This call can easily race with another function!
