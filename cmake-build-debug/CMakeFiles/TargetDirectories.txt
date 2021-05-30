@@ -1,0 +1,3 @@
+C:/Users/Tommy/CLionProjects/OSHW2/cmake-build-debug/CMakeFiles/OSHW2.dir
+C:/Users/Tommy/CLionProjects/OSHW2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Tommy/CLionProjects/OSHW2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
